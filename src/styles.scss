@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-offset: 0.25rem;
+  outline-color: #ff4b2b;
+  border-radius: 0.5rem;
+  transition: transform 50ms ease-in-out;
+}
+
+a {
+  text-decoration-line: none;
+  color: #ff4b2b;
+  font-weight: bold;
+  width: fit-content;
+}
+
+a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.25rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  background-color: #eee;
+}
+
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+input[type='password']::placeholder {
+  color: #5f5252;
+  font-weight: 500;
+}
+
+a {
+  padding: 0.4rem 0.1rem;
+}
+
+textarea,
+input,
+button {
+  box-shadow: 0 0 4px 0 #f05f5f;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 12px 15px;
+}
+
+button {
+  background-color: #ff4b2b;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:hover,
+button:focus,
+button:focus-within {
+  transform: scale(1.05);
+  background-color: #f05f5f;
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: #f05f5f;
+}
+
+body {
+  background: #f6f5f7;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+}

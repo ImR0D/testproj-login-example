@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "localize": false,
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -29,7 +30,8 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["src/styles.scss"],
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
             "production": {
@@ -38,11 +40,6 @@
                   "type": "initial",
                   "maximumWarning": "500kB",
                   "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -51,6 +48,9 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "en": {
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -63,16 +63,32 @@
             },
             "development": {
               "buildTarget": "testproj-login-example:build:development"
+            },
+            "en": {
+              "buildTarget": "testproj-login-example:build:development,en"
             }
           },
           "defaultConfiguration": "development"
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "extract-i18n": {
+          "builder": "ng-extract-i18n-merge:ng-extract-i18n-merge",
+          "options": {
+            "buildTarget": "testproj-login-example:build",
+            "format": "xlf",
+            "outputPath": "src/locale",
+            "targetFiles": ["messages.enUS.xlf"],
+            "sourceFile": "/messages.xlf"
+          }
         }
       },
       "i18n": {
-        "sourceLocale": "pt"
+        "sourceLocale": "pt",
+        "locales": {
+          "en": "src/locale/messages.enUS.xlf"
+        }
       }
     }
   }

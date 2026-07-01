@@ -1,0 +1,66 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="pt" target-language="enUS" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1748265488226315945" datatype="html">
+        <source>Acessar</source>
+        <target state="new">Login</target>
+      </trans-unit>
+      <trans-unit id="2131941440883395202" datatype="html">
+        <source>Esqueci minha senha</source>
+        <target state="new">Forgot password</target>
+      </trans-unit>
+      <trans-unit id="229745099620251056" datatype="html">
+        <source>Registrar usuário</source>
+        <target state="new">Register user</target>
+      </trans-unit>
+      <trans-unit id="2576053855169303732" datatype="html">
+        <source>Já possui uma conta?</source>
+        <target state="new">Already have accounmt?</target>
+      </trans-unit>
+      <trans-unit id="2876845279614484382" datatype="html">
+        <source>Criar conta</source>
+        <target state="new">Create account</target>
+      </trans-unit>
+      <trans-unit id="5002405945343796119" datatype="html">
+        <source> Acessar conta </source>
+        <target state="new"> Account access </target>
+      </trans-unit>
+      <trans-unit id="5821032867801062041" datatype="html">
+        <source> Inscrever-se </source>
+        <target state="new"> Register </target>
+      </trans-unit>
+      <trans-unit id="632428434080756145" datatype="html">
+        <source>Acesse clicando no botão abaixo</source>
+        <target state="new">Click in the button below to access</target>
+      </trans-unit>
+      <trans-unit id="6727165017662043591" datatype="html">
+        <source>Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo</source>
+        <target state="new">Doesn&apos;t have account yet? Don&apos;t waste your time and create an account by clicking in the button below</target>
+      </trans-unit>
+      <trans-unit id="6954612829130041072" datatype="html">
+        <source>Inscreva-se</source>
+        <target state="new">Register</target>
+      </trans-unit>
+      <trans-unit id="placeholderEmail_signIn" datatype="html">
+        <source>E-mail</source>
+        <target state="new">E-mail</target>
+      </trans-unit>
+      <trans-unit id="placeholderEmail_signUp" datatype="html">
+        <source>E-mail</source>
+        <target state="new">E-mail</target>
+      </trans-unit>
+      <trans-unit id="placeholderName_signUp" datatype="html">
+        <source>Nome</source>
+        <target state="new">Name</target>
+      </trans-unit>
+      <trans-unit id="placeholderPassword_signIn" datatype="html">
+        <source>Senha</source>
+        <target state="new">Password</target>
+      </trans-unit>
+      <trans-unit id="placeholderPassword_signUp" datatype="html">
+        <source>Senha</source>
+        <target state="new">Password</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

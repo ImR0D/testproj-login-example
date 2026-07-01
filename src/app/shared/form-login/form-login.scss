@@ -42,6 +42,10 @@ form {
   height: 100%;
   text-align: center;
   gap: 1rem;
+
+  h1 {
+    margin-bottom: 2em;
+  }
 }
 
 input {
@@ -60,6 +64,8 @@ input {
   width: 768px;
   max-width: 100%;
   min-height: 480px;
+  user-select: none;
+  pointer-events: stroke;
 }
 
 .form-container {
@@ -73,10 +79,7 @@ input {
   left: 0;
   width: 50%;
   z-index: 2;
-}
-
-.container.right-panel-active .signIn-container {
-  transform: translateX(100%);
+  transition: all 0.6s ease-in-out;
 }
 
 .signUp-container {
@@ -84,6 +87,11 @@ input {
   width: 50%;
   opacity: 0;
   z-index: 1;
+  transition: all 0.6s ease-in-out;
+}
+
+.container.right-panel-active .signIn-container {
+  transform: translateX(100%);
 }
 
 .container.right-panel-active .signUp-container {
@@ -91,6 +99,24 @@ input {
   opacity: 1;
   z-index: 5;
   animation: show 0.6s;
+}
+
+.container.right-panel-active .overlay .overlay-right {
+  visibility: hidden;
+}
+.container.right-panel-active .overlay .overlay-left {
+  visibility: visible;
+}
+
+.container .overlay .overlay-right {
+  visibility: visible;
+}
+.container .overlay .overlay-left {
+  visibility: hidden;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
 }
 
 @keyframes show {
@@ -116,10 +142,6 @@ input {
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
   z-index: 100;
-}
-
-.container.right-panel-active .overlay-container {
-  transform: translateX(-100%);
 }
 
 .overlay {

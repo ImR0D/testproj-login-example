@@ -3,61 +3,75 @@
   id="container"
   #transitionContainer
 >
-  <div class="form-container signUp-container">
+  <div
+    class="form-container signUp-container"
+    tabindex="-1"
+  >
     <form (ngSubmit)="createAccount()">
-      <h1>Create Account</h1>
+      <h1 i18n>Registrar usuário</h1>
       <input
         type="text"
-        placeholder="Name"
+        placeholder="Nome"
+        i18n-placeholder="@@placeholderName_signUp"
       />
       <input
         type="email"
-        placeholder="Email"
+        placeholder="E-mail"
+        i18n-placeholder="@@placeholderEmail_signUp"
       />
       <input
         type="password"
-        placeholder="Password"
+        placeholder="Senha"
+        i18n-placeholder="@@placeholderPassword_signUp"
       />
-      <button>Sign Up</button>
+      <button i18n>Criar conta</button>
     </form>
   </div>
   <div class="form-container signIn-container">
-    <form action="#">
-      <h1>Sign in</h1>
+    <form (ngSubmit)="login()">
+      <h1 i18n>Acessar</h1>
       <input
         type="email"
-        placeholder="Email"
+        placeholder="E-mail"
+        i18n-placeholder="@@placeholderEmail_signIn"
       />
       <input
         type="password"
-        placeholder="Password"
+        placeholder="Senha"
+        i18n-placeholder="@@placeholderPassword_signIn"
       />
-      <a href="#">Forgot your password?</a>
-      <button>Sign In</button>
+      <a
+        i18n
+        href="#"
+        >Esqueci minha senha</a
+      >
+      <button i18n>Acessar</button>
     </form>
   </div>
   <div class="overlay-container">
     <div class="overlay">
       <div class="overlay-panel overlay-left">
-        <h1>Welcome Back!</h1>
-        <p>To keep connected with us please login with your personal info</p>
+        <h1 i18n>Já possui uma conta?</h1>
+        <p i18n>Acesse clicando no botão abaixo</p>
         <button
           class="ghost"
           id="signIn"
           (click)="transition()"
+          i18n
         >
-          Sign In
+          Acessar conta
         </button>
       </div>
       <div class="overlay-panel overlay-right">
-        <h1>Hello, Friend!</h1>
-        <p>Enter your personal details and start journey with us</p>
+        <h1 i18n>Inscreva-se</h1>
+        <p i18n>Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo</p>
         <button
           class="ghost"
           id="signUp"
           (click)="transition()"
+          i18n
         >
-          Sign Up
+          Inscrever-se
         </button>
       </div>
     </div>

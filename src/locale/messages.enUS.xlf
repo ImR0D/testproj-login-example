@@ -1,63 +1,115 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="pt" target-language="enUS" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="1748265488226315945" datatype="html">
-        <source>Acessar</source>
-        <target state="new">Login</target>
+      <trans-unit id="container_signIn_form_link_ariaLabel_forgotPassword" datatype="html">
+        <source>Esqueci minha senha</source>
+        <target state="new">Forgot password</target>
+      </trans-unit>
+      <trans-unit id="container_signUp_form_heading_ariaDetails_registerUser" datatype="html">
+        <source>Registrar usuário</source>
+        <target state="new">Register user</target>
+      </trans-unit>
+      <trans-unit id="container_overlay_panel_left_heading_ariaDetails_subscribe" datatype="html">
+        <source>Já possui uma conta?</source>
+        <target state="new">Already have accounmt?</target>
+      </trans-unit>
+      <trans-unit id="container_signUp_form_button_ariaLabel_createAccount" datatype="html">
+        <source>Criar conta</source>
+        <target state="new">Create account</target>
+      </trans-unit>
+      <trans-unit id="container_signIn_form_button_ariaLabel_accessAccount" datatype="html">
+        <source>Acessar conta</source>
+        <target state="new">Account access</target>
+      </trans-unit>
+      <trans-unit id="container_overlay_panel_right_button_ariaLabel_subscribe" datatype="html">
+        <source>Inscrever-se</source>
+        <target state="new">Subscribe</target>
+      </trans-unit>
+      <trans-unit id="container_overlay_panel_left_paragraph_ariaDetails_accessAccount" datatype="html">
+        <source>Acesse clicando no botão abaixo</source>
+        <target state="new">Click in the button below to access</target>
+      </trans-unit>
+      <trans-unit id="container_overlay_panel_right_paragraph_ariaDetails_subscribe" datatype="html">
+        <source>Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo</source>
+        <target state="new">Doesn&apos;t have account yet? Don&apos;t waste your time and create an account by clicking in the button below</target>
+      </trans-unit>
+      <trans-unit id="container_overlay_panel_right_heading_ariaDetails_subscribe" datatype="html">
+        <source>Inscreva-se</source>
+        <target state="new">Subscribe</target>
+      </trans-unit>
+      <trans-unit id="container_signUp_form_ariaLabel_registerUser" datatype="html">
+        <source>Formulário de criação de conta</source>
+        <target state="new">Account creation form</target>
+      </trans-unit>
+      <trans-unit id="container_signUp_form_input_placeholder_email" datatype="html">
+        <source>E-mail</source>
+        <target state="new">E-mail</target>
+      </trans-unit>
+      <trans-unit id="1214174068267114817" datatype="html">
+        <source> Acesse clicando no botão abaixo </source>
+        <target state="new">Click the button below to access</target>
       </trans-unit>
       <trans-unit id="2131941440883395202" datatype="html">
         <source>Esqueci minha senha</source>
         <target state="new">Forgot password</target>
       </trans-unit>
-      <trans-unit id="229745099620251056" datatype="html">
-        <source>Registrar usuário</source>
-        <target state="new">Register user</target>
-      </trans-unit>
-      <trans-unit id="2576053855169303732" datatype="html">
-        <source>Já possui uma conta?</source>
-        <target state="new">Already have accounmt?</target>
-      </trans-unit>
-      <trans-unit id="2876845279614484382" datatype="html">
-        <source>Criar conta</source>
+      <trans-unit id="3456063921733794586" datatype="html">
+        <source> Criar conta </source>
         <target state="new">Create account</target>
       </trans-unit>
       <trans-unit id="5002405945343796119" datatype="html">
         <source> Acessar conta </source>
-        <target state="new"> Account access </target>
+        <target state="new">Access account</target>
       </trans-unit>
       <trans-unit id="5821032867801062041" datatype="html">
         <source> Inscrever-se </source>
-        <target state="new"> Register </target>
+        <target state="new">Subscribe</target>
       </trans-unit>
-      <trans-unit id="632428434080756145" datatype="html">
-        <source>Acesse clicando no botão abaixo</source>
-        <target state="new">Click in the button below to access</target>
+      <trans-unit id="6095828838582809602" datatype="html">
+        <source> Já possui uma conta? </source>
+        <target state="new">Already have an account?</target>
       </trans-unit>
-      <trans-unit id="6727165017662043591" datatype="html">
-        <source>Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo</source>
-        <target state="new">Doesn&apos;t have account yet? Don&apos;t waste your time and create an account by clicking in the button below</target>
+      <trans-unit id="6862868702007014775" datatype="html">
+        <source> Inscreva-se </source>
+        <target state="new">Subscribe</target>
       </trans-unit>
-      <trans-unit id="6954612829130041072" datatype="html">
-        <source>Inscreva-se</source>
-        <target state="new">Register</target>
+      <trans-unit id="7494824255604372646" datatype="html">
+        <source> Acessar </source>
+        <target state="new">Account Access</target>
       </trans-unit>
-      <trans-unit id="placeholderEmail_signIn" datatype="html">
+      <trans-unit id="8175303909457537582" datatype="html">
+        <source> Registrar usuário </source>
+        <target state="new">Register user</target>
+      </trans-unit>
+      <trans-unit id="9121901355139688916" datatype="html">
+        <source> Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo </source>
+        <target state="new">Don&apos;t have an account yet? Don&apos;t waste your time, create one by clicking below</target>
+      </trans-unit>
+      <trans-unit id="container_overlay_panel_left_button_ariaLabel_accessAccount" datatype="html">
+        <source>Acessar conta</source>
+        <target state="new">Access account</target>
+      </trans-unit>
+      <trans-unit id="container_signIn_form_ariaLabel_login" datatype="html">
+        <source>Formulário de acesso</source>
+        <target state="new">Access form</target>
+      </trans-unit>
+      <trans-unit id="container_signIn_form_heading_ariaDetails_accessAccount" datatype="html">
+        <source>Acesse sua conta</source>
+        <target state="new">Access your account</target>
+      </trans-unit>
+      <trans-unit id="container_signIn_form_input_placeholder_email" datatype="html">
         <source>E-mail</source>
         <target state="new">E-mail</target>
       </trans-unit>
-      <trans-unit id="placeholderEmail_signUp" datatype="html">
-        <source>E-mail</source>
-        <target state="new">E-mail</target>
-      </trans-unit>
-      <trans-unit id="placeholderName_signUp" datatype="html">
+      <trans-unit id="container_signUp_form_input_placeholder_name" datatype="html">
         <source>Nome</source>
         <target state="new">Name</target>
       </trans-unit>
-      <trans-unit id="placeholderPassword_signIn" datatype="html">
+      <trans-unit id="container_signUp_form_input_placeholder_password" datatype="html">
         <source>Senha</source>
         <target state="new">Password</target>
       </trans-unit>
-      <trans-unit id="placeholderPassword_signUp" datatype="html">
+      <trans-unit id="container_signIn_form_input_placeholder_password" datatype="html">
         <source>Senha</source>
         <target state="new">Password</target>
       </trans-unit>

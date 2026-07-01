@@ -1,75 +1,161 @@
 <div
   class="container"
-  id="container"
   #transitionContainer
 >
-  <div
-    class="form-container signUp-container"
-    tabindex="-1"
-  >
-    <form (ngSubmit)="createAccount()">
-      <h1 i18n>Registrar usuário</h1>
+  <div class="form-container signUp-container">
+    <form
+      i18n-aria-label="@@container_signUp_form_ariaLabel_registerUser"
+      role="form"
+      aria-label="Formulário de criação de conta"
+      (ngSubmit)="createAccount()"
+    >
+      <h1
+        i18n-aria-details="@@container_signUp_form_heading_ariaDetails_registerUser"
+        i18n
+        role="heading"
+        aria-details="Registrar usuário"
+      >
+        Registrar usuário
+      </h1>
       <input
+        i18n-placeholder="@@container_signUp_form_input_placeholder_name"
+        i18n
         type="text"
         placeholder="Nome"
-        i18n-placeholder="@@placeholderName_signUp"
       />
       <input
+        i18n-placeholder="@@container_signUp_form_input_placeholder_email"
+        i18n
         type="email"
         placeholder="E-mail"
-        i18n-placeholder="@@placeholderEmail_signUp"
       />
       <input
+        i18n-placeholder="@@container_signUp_form_input_placeholder_password"
+        i18n
         type="password"
         placeholder="Senha"
-        i18n-placeholder="@@placeholderPassword_signUp"
       />
-      <button i18n>Criar conta</button>
+      <button
+        i18n-aria-label="@@container_signUp_form_button_ariaLabel_createAccount"
+        i18n
+        role="button"
+        aria-label="Criar conta"
+      >
+        Criar conta
+      </button>
     </form>
   </div>
   <div class="form-container signIn-container">
-    <form (ngSubmit)="login()">
-      <h1 i18n>Acessar</h1>
+    <form
+      i18n-aria-label="@@container_signIn_form_ariaLabel_login"
+      role="form"
+      aria-label="Formulário de acesso"
+      (ngSubmit)="login()"
+    >
+      <h1
+        i18n-aria-details="@@container_signIn_form_heading_ariaDetails_accessAccount"
+        i18n
+        role="heading"
+        aria-details="Acesse sua conta"
+      >
+        Acessar
+      </h1>
       <input
+        i18n-placeholder="@@container_signIn_form_input_placeholder_email"
+        i18n
+        role="textbox"
         type="email"
         placeholder="E-mail"
-        i18n-placeholder="@@placeholderEmail_signIn"
       />
       <input
+        i18n-placeholder="@@container_signIn_form_input_placeholder_password"
+        i18n
+        role="textbox"
         type="password"
         placeholder="Senha"
-        i18n-placeholder="@@placeholderPassword_signIn"
       />
       <a
+        i18n-aria-label="@@container_signIn_form_link_ariaLabel_forgotPassword"
         i18n
+        role="link"
+        aria-label="Esqueci minha senha"
         href="#"
         >Esqueci minha senha</a
       >
-      <button i18n>Acessar</button>
+      <button
+        i18n-aria-label="@@container_signIn_form_button_ariaLabel_accessAccount"
+        i18n
+        role="button"
+        aria-label="Acessar conta"
+      >
+        Acessar
+      </button>
     </form>
   </div>
   <div class="overlay-container">
     <div class="overlay">
-      <div class="overlay-panel overlay-left">
-        <h1 i18n>Já possui uma conta?</h1>
-        <p i18n>Acesse clicando no botão abaixo</p>
-        <button
-          class="ghost"
-          id="signIn"
-          (click)="transition()"
+      <div
+        aria-atomic="true"
+        aria-relevant="additions text"
+        aria-live="polite"
+        class="overlay-panel overlay-left"
+      >
+        <h1
+          i18n-aria-details="@@container_overlay_panel_left_heading_ariaDetails_subscribe"
           i18n
+          role="heading"
+          aria-details="Já possui uma conta?"
+        >
+          Já possui uma conta?
+        </h1>
+        <p
+          i18n-aria-details="@@container_overlay_panel_left_paragraph_ariaDetails_accessAccount"
+          aria-details="Acesse clicando no botão abaixo"
+          i18n
+          role="text"
+        >
+          Acesse clicando no botão abaixo
+        </p>
+        <button
+          i18n-aria-label="@@container_overlay_panel_left_button_ariaLabel_accessAccount"
+          i18n
+          role="button"
+          aria-label="Acessar conta"
+          (click)="transition()"
+          class="ghost"
         >
           Acessar conta
         </button>
       </div>
-      <div class="overlay-panel overlay-right">
-        <h1 i18n>Inscreva-se</h1>
-        <p i18n>Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo</p>
-        <button
-          class="ghost"
-          id="signUp"
-          (click)="transition()"
+      <div
+        aria-atomic="true"
+        aria-relevant="additions text"
+        aria-live="polite"
+        class="overlay-panel overlay-right"
+      >
+        <h1
+          i18n-aria-details="@@container_overlay_panel_right_heading_ariaDetails_subscribe"
           i18n
+          role="heading"
+          aria-details="Inscreva-se"
+        >
+          Inscreva-se
+        </h1>
+        <p
+          i18n-aria-details="@@container_overlay_panel_right_paragraph_ariaDetails_subscribe"
+          i18n
+          role="text"
+          aria-details="Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo"
+        >
+          Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo
+        </p>
+        <button
+          i18n-aria-label="@@container_overlay_panel_right_button_ariaLabel_subscribe"
+          i18n
+          role="button"
+          aria-label="Inscrever-se"
+          (click)="transition()"
+          class="ghost"
         >
           Inscrever-se
         </button>

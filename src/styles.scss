@@ -7,7 +7,6 @@
   box-sizing: border-box;
   outline-offset: 0.25rem;
   outline-color: #ff4b2b;
-  border-radius: 0.5rem;
   transition: transform 50ms ease-in-out;
 }
 
@@ -49,6 +48,24 @@ button {
   border-radius: 0.5rem;
   border: none;
   padding: 12px 15px;
+}
+
+a:not(a[href]) {
+  cursor: default;
+  text-decoration: none;
+  color: initial;
+  font-size: initial;
+  font-weight: normal;
+  line-height: normal;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+a[href],
+button,
+input[type='button'],
+input[type='submit'] {
+  cursor: pointer;
 }
 
 button {

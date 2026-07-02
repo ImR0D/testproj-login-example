@@ -1,20 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+:root {
+  --highlight-color: #ff4b2b;
+  --highlight-border: #f05f5f;
+  --smooth-highlight-color: #ff5078;
+  --placeholder-color: rgba(90, 90, 90, 0.7);
+
+  --bg-white: #ffffff;
+  --bg-light: #f6f5f7;
+
+  --main-container-shadow:
+    0 14px 28px var(--fifth-flame-shade), 0 10px 10px var(--fourth-flame-shade);
+
+  // smooth to dark flame shades
+  --primary-flame-shade: #ff4b2b;
+  --secondary-flame-shade: #cc3c22;
+  --third-flame-shade: #992d1a;
+  --fourth-flame-shade: #661e11;
+  --fifth-flame-shade: #330f09;
+
+  // smooth to light flame tints
+  --primary-flame-tint: #ff4b2b;
+  --secondary-flame-tint: #ff6f55;
+  --third-flame-tint: #ff9380;
+  --fourth-flame-tint: #ffb7aa;
+  --fifth-flame-tint: #ffdbd5;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline-offset: 0.25rem;
-  outline-color: #ff4b2b;
+  outline-color: var(--highlight-border);
   transition: transform 50ms ease-in-out;
 }
 
 a {
   text-decoration-line: none;
-  color: #ff4b2b;
+  color: var(--highlight-color);
   font-weight: bold;
   width: fit-content;
+  padding: 0.4rem 0.1rem;
+  border-radius: 0.5rem;
 }
 
 a:hover {
@@ -33,18 +62,14 @@ input[type='password'] {
 input[type='text']::placeholder,
 input[type='email']::placeholder,
 input[type='password']::placeholder {
-  color: #5f5252;
-  font-weight: 500;
-}
-
-a {
-  padding: 0.4rem 0.1rem;
+  color: var(--placeholder-color);
+  font-weight: 600;
 }
 
 textarea,
 input,
 button {
-  box-shadow: 0 0 4px 0 #f05f5f;
+  box-shadow: 0 0 4px 0 var(--highlight-border);
   border-radius: 0.5rem;
   border: none;
   padding: 12px 15px;
@@ -69,7 +94,7 @@ input[type='submit'] {
 }
 
 button {
-  background-color: #ff4b2b;
+  background-color: var(--highlight-color);
   color: #ffffff;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -80,16 +105,19 @@ button:hover,
 button:focus,
 button:focus-within {
   transform: scale(1.05);
-  background-color: #f05f5f;
+  background-color: var(--highlight-border);
 }
 
 button:active {
   transform: scale(0.95);
-  background-color: #f05f5f;
+  background-color: var(--highlight-border);
 }
 
 body {
   background: #f6f5f7;
   font-family: 'Montserrat', sans-serif;
   display: flex;
+  background: url('/fundo1.jpg') no-repeat center center fixed;
+  backdrop-filter: brightness(1.2) hue-rotate(-180deg) saturate(0.7) contrast(200%) invert(0.1)
+    opacity(0.85);
 }

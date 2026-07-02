@@ -1,12 +1,14 @@
 <div
   class="container"
   #transitionContainer
+  [cdkTrapFocus]="true"
 >
   <div class="form-container signUp-container">
     <form
       i18n-aria-label="@@container_signUp_form_ariaLabel_registerUser"
       role="form"
       aria-label="Formulário de criação de conta"
+      [formGroup]="signUpForm"
       (ngSubmit)="createAccount()"
     >
       <h1
@@ -14,6 +16,7 @@
         i18n
         role="heading"
         aria-details="Registrar usuário"
+        tabindex="0"
       >
         Registrar usuário
       </h1>
@@ -22,24 +25,27 @@
         i18n
         type="text"
         placeholder="Nome"
+        formControlName="name"
       />
       <input
         i18n-placeholder="@@container_signUp_form_input_placeholder_email"
         i18n
         type="email"
         placeholder="E-mail"
+        formControlName="email"
       />
       <input
         i18n-placeholder="@@container_signUp_form_input_placeholder_password"
         i18n
         type="password"
         placeholder="Senha"
+        formControlName="password"
       />
       <button
         i18n-aria-label="@@container_signUp_form_button_ariaLabel_createAccount"
         i18n
         role="button"
-        aria-label="Criar conta"
+        type="submit"
       >
         Criar conta
       </button>
@@ -50,6 +56,7 @@
       i18n-aria-label="@@container_signIn_form_ariaLabel_login"
       role="form"
       aria-label="Formulário de acesso"
+      [formGroup]="signInForm"
       (ngSubmit)="login()"
     >
       <h1
@@ -57,6 +64,7 @@
         i18n
         role="heading"
         aria-details="Acesse sua conta"
+        tabindex="0"
       >
         Acessar
       </h1>
@@ -66,6 +74,7 @@
         role="textbox"
         type="email"
         placeholder="E-mail"
+        formControlName="email"
       />
       <input
         i18n-placeholder="@@container_signIn_form_input_placeholder_password"
@@ -73,6 +82,7 @@
         role="textbox"
         type="password"
         placeholder="Senha"
+        formControlName="password"
       />
       <a
         i18n-aria-label="@@container_signIn_form_link_ariaLabel_forgotPassword"
@@ -80,6 +90,7 @@
         role="link"
         aria-label="Esqueci minha senha"
         href="#"
+        tabindex="0"
         >Esqueci minha senha</a
       >
       <button
@@ -87,12 +98,16 @@
         i18n
         role="button"
         aria-label="Acessar conta"
+        type="submit"
       >
         Acessar
       </button>
     </form>
   </div>
-  <div class="overlay-container">
+  <div
+    class="overlay-container"
+    cdkTrapFocusAutoCapture
+  >
     <div class="overlay">
       <div
         aria-atomic="true"
@@ -105,6 +120,7 @@
           i18n
           role="heading"
           aria-details="Já possui uma conta?"
+          tabindex="0"
         >
           Já possui uma conta?
         </h1>
@@ -113,6 +129,7 @@
           aria-details="Acesse clicando no botão abaixo"
           i18n
           role="text"
+          tabindex="0"
         >
           Acesse clicando no botão abaixo
         </p>
@@ -138,6 +155,7 @@
           i18n
           role="heading"
           aria-details="Inscreva-se"
+          tabindex="0"
         >
           Inscreva-se
         </h1>
@@ -146,6 +164,7 @@
           i18n
           role="text"
           aria-details="Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo"
+          tabindex="0"
         >
           Ainda não possui uma conta? Não perca seu tempo, crie uma conta clicando abaixo
         </p>

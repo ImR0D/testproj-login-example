@@ -1,7 +1,9 @@
-import { Component, ElementRef, model, viewChild } from '@angular/core';
+import { Component, ElementRef, inject, model, viewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import CreateAccountModel from '../models/Account/CreateAccount.model';
+import FormCreateAccountModel from '../models/Account/FormCreateAccount.model';
 import { A11yModule } from '@angular/cdk/a11y';
+import { AuthStrategy } from '../interfaces/AuthStrategy';
+import CreateAccountModel from '../models/Account/CreateAccount.model';
 
 @Component({
   selector: 'app-form-login',
@@ -10,18 +12,19 @@ import { A11yModule } from '@angular/cdk/a11y';
   styleUrl: './form-login.scss',
 })
 export class FormLogin {
+  authService = inject(AuthStrategy);
   controlTransition = model(false);
   sideTransitionRef = viewChild.required<ElementRef<HTMLDivElement>>('transitionContainer');
 
-  signUpForm = new FormGroup<CreateAccountModel>({
-    name: new FormControl<string | null>('', [Validators.required, Validators.minLength(3)]),
+  signUpForm = new FormGroup<FormCreateAccountModel>({
+    name: new FormControl<string | null>('', Validators.required),
     email: new FormControl<string | null>('', [Validators.required, Validators.email]),
-    password: new FormControl<string | null>('', [Validators.required, Validators.minLength(6)]),
+    password: new FormControl<string | null>('', Validators.required),
   });
 
   signInForm = new FormGroup({
     email: new FormControl<string | null>('', [Validators.required, Validators.email]),
-    password: new FormControl<string | null>('', [Validators.required, Validators.minLength(6)]),
+    password: new FormControl<string | null>('', Validators.required),
   });
 
   transition() {
@@ -34,20 +37,46 @@ export class FormLogin {
     this.controlTransition.set(!this.controlTransition());
   }
 
-  createAccount() {
+  async createAccount() {
     if (!this.signUpForm.valid) {
       throw new Error('Formulário inválido. Por favor, preencha todos os campos corretamente.');
     }
+    const form = this.signUpForm.value;
 
-    console.log(this.signUpForm.value);
-    this.signUpForm.reset();
+    const entityMapping: CreateAccountModel = {
+      name: form.name!,
+      email: form.email!,
+      password: form.password!,
+    };
+
+    try {
+      await this.authService.register(entityMapping);
+      alert('Conta criada com sucesso! Faça login para continuar');
+      this.signUpForm.reset();
+      this.transition();
+    } catch {
+      alert('Erro ao registrar usuário');
+    }
   }
-  login() {
+
+  async login() {
     if (!this.signInForm.valid) {
       throw new Error('Formulário inválido. Por favor, preencha todos os campos corretamente.');
     }
+    const form = this.signInForm.value;
 
-    console.log(this.signInForm.value);
-    this.signInForm.reset();
+    try {
+      const isAuthenticated = await this.authService.login(form.email!, form.password!);
+
+      if (isAuthenticated) {
+        alert('Login realizado com sucesso');
+        this.signInForm.reset();
+      } else {
+        alert('E-mail ou senha incorretos, usuário não autenticado!');
+      }
+    } catch (error) {
+      console.error('Erro real detectado no processo de login:', error);
+      console.warn('Ops!... Ocorreu um erro inesperado ao tentar realizar o login');
+    }
   }
 }
